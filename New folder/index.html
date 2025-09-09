@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>NotesHub - Interactive E-Learning</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Slab:wght@400;700&family=Pacifico&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Login Section -->
+<div id="login-section" class="centered-section">
+  <div class="login-card">
+    <h1 class="logo">NotesHub</h1>
+    <p class="typing-text" id="login-typing">Learn. Practice. Master.</p>
+    <input type="text" id="username" placeholder="Enter Username">
+    <input type="password" id="password" placeholder="Enter Password">
+    <select id="degree-year">
+      <option value="">Select Year of Degree</option>
+      <option value="1">1st Year</option>
+      <option value="2">2nd Year</option>
+      <option value="3">3rd Year</option>
+      <option value="4">4th Year</option>
+    </select>
+    <button id="login-btn">Login</button>
+    <p id="login-error" class="error-msg"></p>
+  </div>
+</div>
+
+<!-- Main App -->
+<div id="main-app" class="hidden">
+
+  <!-- Hero Banner -->
+  <section class="hero-banner">
+    <h1 id="hero-text"></h1>
+    <div class="recommended-path">
+      <div class="path-card" onclick="openTab('Python')">Python</div>
+      <div class="path-card" onclick="openTab('Java')">Java</div>
+      <div class="path-card" onclick="openTab('C')">C</div>
+    </div>
+  </section>
+
+  <!-- Tabs -->
+  <div class="tabs">
+    <button class="tablink active" onclick="openTab('Python')">Python</button>
+    <button class="tablink" onclick="openTab('Java')">Java</button>
+    <button class="tablink" onclick="openTab('C')">C</button>
+    <button class="tablink" onclick="openTab('Quiz')">Quizzes</button>
+    <button class="tablink" onclick="openTab('Leaderboard')">Leaderboard</button>
+    <button class="tablink" onclick="openTab('Profile')">Profile</button>
+  </div>
+
+  <!-- Tab Contents -->
+  <div id="Python" class="tabcontent">
+    <h2>Python Notes</h2>
+    <div class="chapter-tabs" id="Python-chapters"></div>
+    <div id="Python-Notes" class="notes-content"></div>
+  </div>
+
+  <div id="Java" class="tabcontent">
+    <h2>Java Notes</h2>
+    <div class="chapter-tabs" id="Java-chapters"></div>
+    <div id="Java-Notes" class="notes-content"></div>
+  </div>
+
+  <div id="C" class="tabcontent">
+    <h2>C Notes</h2>
+    <div class="chapter-tabs" id="C-chapters"></div>
+    <div id="C-Notes" class="notes-content"></div>
+  </div>
+
+  <div id="Quiz" class="tabcontent">
+    <h2>Quizzes</h2>
+    <div id="quiz-section"></div>
+  </div>
+
+  <div id="Leaderboard" class="tabcontent">
+    <h2>Leaderboard</h2>
+    <div id="leaderboard-section"></div>
+  </div>
+
+  <div id="Profile" class="tabcontent">
+    <h2>Profile</h2>
+    <div id="profile-section"></div>
+  </div>
+
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
